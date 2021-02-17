@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+html, body {
+  font-family: 'Quicksand', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.jumbotron {
+  padding: 2rem 1rem 15rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/google.jpg");
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-title, .card-authors {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.book-card {
+  border-radius: 10px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+}
+.book-img {
+  border-radius: 3px;
+}
+#books img,
+#book img {
+  width: 100%;
+}
+.brand-text {
+  font-size: 2rem;
+}
+#book-logo {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#connect {
+  margin-top: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fa-facebook {
+  color: #3b5998;
+  font-size: 2.5em;
+  margin-right: 2rem;
+}
+.fa-linkedin {
+  color: #2867B2;
+  font-size: 2.5em;
+  margin-right: 2rem;
+}
+.fa-envelope {
+  color: orangered;
+  font-size: 2.5em;
+  margin-right: 2rem;
+}
+.fa-instagram {
+  color: #C13584;
+  font-size: 2.5em;
+  margin-right: 2rem;
+}
+.fa-github {
+  color: #6f42c1;
+  font-size: 2.5em;
+  
+}
+.fa-facebook:hover,
+.fa-linkedin:hover,
+.fa-envelope:hover,
+.fa-instagram:hover,
+.fa-github:hover {
+  color: #d5d5d5;
+}
+
+hr {
+  border-top: 2px solid black;
+}
+
+@media (min-width: 960px) {
+  #books .col-md-3 .well {
+    height: 350px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #books .col-md-3 img {
+    height: 250px;
   }
 }

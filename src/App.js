@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import {Provider} from 'react-redux';
+import {HashRouter as Router, Route} from 'react-router-dom';
+
+import Navbar from './components/layout/Navbar';
+import Social from './components/layout/Social';
+import Footer from './components/layout/Footer';
+
+import Landing from './components/home/Landing';
+import Book from './components/home/Book';
+
+import store from './store';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <div>
+          <Navbar />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/book/:id" component={Book} />
+          <Social />
+          <Footer />
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
